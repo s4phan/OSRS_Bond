@@ -30,7 +30,7 @@ while(1):
     else: 
         toaster.show_toast('OSRS_BOND', 'Profit Margin Not Reached', duration= 3,
         icon_path="D:\\Users\\sheeh\Desktop\\Projects\\OSRS Tools\\OSRS_Bond\\coin.ico")
-        time.sleep(3600)
+        time.sleep(3600) #check every hour 
         
 
 
