@@ -28,7 +28,8 @@ while(1):
         icon_path="D:\\Users\\sheeh\Desktop\\Projects\\OSRS Tools\\OSRS_Bond\\coin.ico")
         exit(0)
     else: 
-        print("ProfitMargin not reached")
+        toaster.show_toast('OSRS_BOND', 'Profit Margin Not Reached', duration= 3,
+        icon_path="D:\\Users\\sheeh\Desktop\\Projects\\OSRS Tools\\OSRS_Bond\\coin.ico")
         time.sleep(3600)
         
 
