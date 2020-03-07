@@ -27,6 +27,8 @@ if (price >= notifyPrice):
     toaster.show_toast('OSRS_BOND', 'Profit Margin Reached', duration= 3,
     icon_path="D:\\Users\\sheeh\Desktop\\Projects\\OSRS Tools\\OSRS_Bond\\coin.ico")
     exit(0)
+else: 
+    print("ProfitMargin not reached")
 
 
 
