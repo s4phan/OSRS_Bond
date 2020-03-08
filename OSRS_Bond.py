@@ -1,3 +1,4 @@
+# pyinstaller --onefile -i [icon_file] [script name], reminder on how to convert .py to .exe
 import requests 
 import win10toast
 import re
@@ -19,18 +20,27 @@ while(1):
     price = int(elem)
     # End web scrapping for Item
     #Start comparison
-    buyPrice = 4500000  #Fill here
-    breakEvenPoint = buyPrice * 1.1 #because 10% tax, essentially this is the buy price because you have to make it tradable
+    buyPrice = 4500000  #FILL HERE, amount you bought the item for 
     profitGoal =  2.5 #FILL HERE for bonds it fluctuates between +/- 5% so ill do 2.5
+    minimumPriceToBuy = 4500000 #FILL HERE , minimum price you want to buy the item for 
+    breakEvenPoint = buyPrice * 1.1 #because 10% tax, essentially this is the buy price because you have to make it tradable
     notifyPrice = breakEvenPoint * (1 + (profitGoal/100))
+
+    if(price <= minimumPriceToBuy):
+        toaster.show_toast('OSRS_BOND', 'Item has reached the price you are willing to buy for. BUY NOW', duration= 3,
+        icon_path="D:\\Users\\sheeh\Desktop\\Projects\\OSRS Tools\\OSRS_Bond\\coin.ico")
+       
     if (price >= notifyPrice): 
-        toaster.show_toast('OSRS_BOND', 'Profit Margin Reached', duration= 3,
+        toaster.show_toast('OSRS_BOND', 'Profit Margin Reached, SELL NOW', duration= 3,
         icon_path="D:\\Users\\sheeh\Desktop\\Projects\\OSRS Tools\\OSRS_Bond\\coin.ico")
         exit(0)
     else: 
         toaster.show_toast('OSRS_BOND', 'Profit Margin Not Reached', duration= 3,
         icon_path="D:\\Users\\sheeh\Desktop\\Projects\\OSRS Tools\\OSRS_Bond\\coin.ico")
         time.sleep(3600) #check every hour 
+    
+
+
         
 
 
