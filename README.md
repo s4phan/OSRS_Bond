@@ -6,7 +6,7 @@
 ## To Do:
 - [x] Notify for minimum buy price
 - [ ] Expand ability to work for other items
-- [ ] Implement GUI for input by user
+- [x] Implement GUI for input by user (Currently finished outline)
 - [ ] Clean up code for price stripping situation
 - [ ] Store Items in database
 
