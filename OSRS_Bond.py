@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 import time
 
 
-def bond():
+def bond(PB,goal,minimumPrice):
     while(1):
         toaster = win10toast.ToastNotifier()
         #http://services.runescape.com/m=itemdb_oldschool/viewitem?obj=554 <--- can just change the object ID and it will iterate through the items :POGCHAMP: so just have a database that scrapes the name and price 
@@ -26,7 +26,7 @@ def bond():
         #Start comparison
         buyPrice = 4500000  #FILL HERE, amount you bought the item for 
         profitGoal =  2.5 #FILL HERE for bonds it fluctuates between +/- 5% so ill do 2.5
-        minimumPriceToBuy = 4500000 #FILL HERE , minimum price you want to buy the item for 
+        minimumPriceToBuy = int(minimumPrice) #FILL HERE , minimum price you want to buy the item for 
         breakEvenPoint = buyPrice * 1.1 #because 10% tax, essentially this is the buy price because you have to make it tradable
         notifyPrice = breakEvenPoint * (1 + (profitGoal/100))
 
@@ -42,7 +42,7 @@ def bond():
             toaster.show_toast('OSRS_BOND', 'Profit Margin Not Reached', duration= 3,
             icon_path="D:\\Users\\sheeh\Desktop\\Projects\\OSRS Tools\\OSRS_Bond\\coin.ico")
             time.sleep(3600) #check every hour 
-#bond()
+
 
 #------------- START GUI 
 from tkinter import *
@@ -52,6 +52,7 @@ title = Label(root, text="Notify OSRS")
 item = Label(root, text="Item: ") #should be drop down or search for items
 priceBought = Label(root, text="What price did you buy the item for?")
 goal = Label(root, text="What is your profit goal for this item?")
+mPriceLabel = Label(root, text="When would you like to buy this item?")
 
 #minimumbuyitem
 #minimumbuyprice = Label(root, text="What price did you buy the item for?")
@@ -60,12 +61,24 @@ title.grid(row=0,column=0)
 item.grid(row=1,column=0)
 priceBought.grid(row=2,column=0)
 goal.grid(row=3,column=0)
+mPriceLabel.grid(row=4,column=0)
 
-runButton = Button(root, text="Run!",padx=50,command=bond,fg="white",bg="brown")
+
+entryPB = Entry(root,width=30,borderwidth=3)
+#entryPB.insert(0,"noob")
+entryGoal = Entry(root,width=30,borderwidth=3)
+mPrice = Entry(root,width=30,borderwidth=3)
+entryPB.grid(row=2,column=1)
+entryGoal.grid(row=3,column=1)
+mPrice.grid(row=4,column=1)
+
+
+def bond_click(PB,goal):
+    print(PB+goal)
+
+runButton = Button(root, text="Run!",padx=50,fg="white",bg="brown",command=lambda: bond(entryPB.get(),entryGoal.get(),mPrice.get()))
 runButton.grid(row=5,column=1)
 
-entryPB = Entry(root)
-entryPB.grid(row=2,column=1)
 
 
 root.mainloop()
