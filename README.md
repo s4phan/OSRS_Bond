@@ -7,9 +7,13 @@
 - [ ] Expand ability to work for other items
 - [ ] Implement GUI for input by user
 - [ ] Clean up code for price stripping situation
+- [ ] Store Items in database
+
 ## Updates:
 ```bash
 03/08/2020 - Added Minimum buy price Notify.
+03/09/2020 - Added Base GUI
+03/10/2020 - Added User Input
 ``` 
 
 
