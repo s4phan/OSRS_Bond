@@ -5,9 +5,11 @@ import re
 from bs4 import BeautifulSoup
 import time
 
+
 def bond():
     while(1):
         toaster = win10toast.ToastNotifier()
+        #http://services.runescape.com/m=itemdb_oldschool/viewitem?obj=554 <--- can just change the object ID and it will iterate through the items :POGCHAMP: so just have a database that scrapes the name and price 
         URL = 'http://services.runescape.com/m=itemdb_oldschool/Old+school+bond/viewitem?obj=13190'
         page = requests.get(URL)
         soup = BeautifulSoup(page.content, 'html.parser')
@@ -40,10 +42,35 @@ def bond():
             toaster.show_toast('OSRS_BOND', 'Profit Margin Not Reached', duration= 3,
             icon_path="D:\\Users\\sheeh\Desktop\\Projects\\OSRS Tools\\OSRS_Bond\\coin.ico")
             time.sleep(3600) #check every hour 
-    
-bond()
+#bond()
+
+#------------- START GUI 
+from tkinter import *
+root = Tk()
+
+title = Label(root, text="Notify OSRS") 
+item = Label(root, text="Item: ") #should be drop down or search for items
+priceBought = Label(root, text="What price did you buy the item for?")
+goal = Label(root, text="What is your profit goal for this item?")
+
+#minimumbuyitem
+#minimumbuyprice = Label(root, text="What price did you buy the item for?")
+
+title.grid(row=0,column=0)
+item.grid(row=1,column=0)
+priceBought.grid(row=2,column=0)
+goal.grid(row=3,column=0)
+
+runButton = Button(root, text="Run!",padx=50,command=bond,fg="white",bg="brown")
+runButton.grid(row=5,column=1)
+
+entryPB = Entry(root)
+entryPB.grid(row=2,column=1)
 
 
+root.mainloop()
+
+#-------------- END GUI
 
 
 
