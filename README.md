@@ -6,6 +6,7 @@
 - [x] Notify for minimum buy price
 - [ ] Expand ability to work for other items
 - [ ] Implement GUI for input by user
+- [ ] Clean up code for price stripping situation
 ## Updates:
 ```bash
 03/08/2020 - Added Minimum buy price Notify.
