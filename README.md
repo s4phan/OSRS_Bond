@@ -19,10 +19,9 @@
 
 ## Image Snippets:
 
-<img src="images/GUI.PNG" height="100">
-<img src="images/OSRSBOND.PNG" height="100">
-<img src="images/bigWIn.png" height="100">
-<img src="images/checkmate.PNG" height="100">
+<img src="images/OSRSBOND.PNG" height="100"> <img src="images/GUI.PNG" height="100">
+<img src="images/bigWIn.png" height="100"> <img src="images/checkmate.PNG" height="100">
+
 
 
 
