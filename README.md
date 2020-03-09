@@ -13,6 +13,7 @@
 ## Updates:
 ```bash
 03/08/2020 - Added Minimum buy price Notify.
+03/08/2020 - Added Image snippets
 03/09/2020 - Added Base GUI
 03/10/2020 - Added User Input
 ``` 
