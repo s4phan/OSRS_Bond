@@ -32,7 +32,7 @@ def bond(PB,goal,minimumPrice):
 
         if(price <= minimumPriceToBuy):
             toaster.show_toast('OSRS_BOND', 'Item has reached the price you are willing to buy for. BUY NOW', duration= 3,
-            icon_path="D:\\Users\\sheeh\Desktop\\Projects\\OSRS Tools\\OSRS_Bond\\coin.ico")
+            icon_path="D:\\Users\\sheeh\Desktop\\Projects\\OSRS Tools\\OSRS_Bond\\camera_test.ico")
        
         if (price >= notifyPrice): 
             toaster.show_toast('OSRS_BOND', 'Profit Margin Reached, SELL NOW', duration= 3,
