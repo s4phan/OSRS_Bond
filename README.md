@@ -8,13 +8,14 @@
 - [ ] Expand ability to work for other items
 - [x] Implement GUI for input by user (Currently finished outline)
 - [ ] Clean up code for price stripping situation
+- [x] Begin scrapping item names and item prices
 - [ ] Store Items in SQL Database
 
 ## Updates:
 ```bash
 - Added Minimum buy price Notify.
 - Added Image snippets
-  Added Base GUI
+- Added Base GUI
 - Added User Input
 - Implemented new script to scrap data and store into .txt file
 ``` 
