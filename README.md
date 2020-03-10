@@ -8,14 +8,15 @@
 - [ ] Expand ability to work for other items
 - [ ] Implement GUI for input by user
 - [ ] Clean up code for price stripping situation
-- [ ] Store Items in database
+- [ ] Store Items in SQL Database
 
 ## Updates:
 ```bash
-03/08/2020 - Added Minimum buy price Notify.
-03/08/2020 - Added Image snippets
-03/09/2020 - Added Base GUI
-03/10/2020 - Added User Input
+- Added Minimum buy price Notify.
+- Added Image snippets
+  Added Base GUI
+- Added User Input
+- Implemented new script to scrap data and store into .txt file
 ``` 
 
 ## Image Snippets:
