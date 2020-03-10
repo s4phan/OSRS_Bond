@@ -24,8 +24,8 @@ def bond(PB,goal,minimumPrice):
         price = int(elem)
         # End web scrapping for Item
         #Start comparison
-        buyPrice = 4500000  #FILL HERE, amount you bought the item for 
-        profitGoal =  2.5 #FILL HERE for bonds it fluctuates between +/- 5% so ill do 2.5
+        buyPrice = float(PB)  #FILL HERE, amount you bought the item for 
+        profitGoal =  float(goal) #FILL HERE for bonds it fluctuates between +/- 5% so ill do 2.5
         minimumPriceToBuy = int(minimumPrice) #FILL HERE , minimum price you want to buy the item for 
         breakEvenPoint = buyPrice * 1.1 #because 10% tax, essentially this is the buy price because you have to make it tradable
         notifyPrice = breakEvenPoint * (1 + (profitGoal/100))
@@ -54,8 +54,6 @@ priceBought = Label(root, text="What price did you buy the item for?")
 goal = Label(root, text="What is your profit goal for this item?")
 mPriceLabel = Label(root, text="When would you like to buy this item?")
 
-#minimumbuyitem
-#minimumbuyprice = Label(root, text="What price did you buy the item for?")
 
 title.grid(row=0,column=0)
 item.grid(row=1,column=0)
