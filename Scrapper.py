@@ -2,6 +2,7 @@ import requests
 import re
 from bs4 import BeautifulSoup
 
+
 #http://services.runescape.com/m=itemdb_oldschool/viewitem?obj=554 <--- can just change the object ID and it will iterate through the items :POGCHAMP: so just have a database that scrapes the name and price 
 
 

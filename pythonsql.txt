@@ -1,0 +1,5 @@
+https://medium.com/financeexplained/from-excel-to-databases-with-python-c6f70bdc509b
+https://www.w3schools.com/python/python_mysql_getstarted.asp
+https://dev.mysql.com/doc/mysql-getting-started/en/
+https://dev.mysql.com/downloads/installer/
+
