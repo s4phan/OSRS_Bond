@@ -3,7 +3,7 @@ import csv
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="Sp323823906",
+    passwd= XXXXXXXXXXXXXXXX
     database="runescapeIDs"
 )
 mycursor = mydb.cursor()
